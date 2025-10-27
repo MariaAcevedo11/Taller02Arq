@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ pokenea.nombre }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(120deg, #ffca28, #ffa000);
+            color: #333;
+            margin-top: 50px;
+        }
+        img {
+            width: 250px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        p {
+            font-style: italic;
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ pokenea.nombre }}</h1>
+    <img src="{{ pokenea.imagen }}" alt="{{ pokenea.nombre }}">
+    <p>"{{ pokenea.frase }}"</p>
+    <small>ID del contenedor: {{ contenedor_id }}</small>
+</body>
+</html>
