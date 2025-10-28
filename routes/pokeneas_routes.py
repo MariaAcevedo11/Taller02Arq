@@ -14,22 +14,31 @@ S3_BUCKET = "bucketgabsab"
 AWS_REGION = "us-east-1"
 
 
+from botocore import UNSIGNED
+from botocore.client import Config
+
 def obtener_imagenes_s3():
     """
-    Intenta obtener las imágenes desde un bucket S3 público.
-    Si no hay credenciales o hay error, devuelve una lista vacía.
+    Obtiene imágenes de un bucket S3 público usando boto3 sin requerir credenciales.
     """
     try:
-        s3 = boto3.client("s3", region_name=AWS_REGION)
-        objetos = s3.list_objects_v2(Bucket=S3_BUCKET)
+        # Conexión sin firma (no necesita credenciales)
+        s3 = boto3.client("s3", region_name=AWS_REGION, config=Config(signature_version=UNSIGNED))
+        
+        # Si tus imágenes están dentro de una carpeta (por ejemplo 'imagenes/')
+        objetos = s3.list_objects_v2(Bucket=S3_BUCKET, Prefix="imagenes/")
+        
         imagenes = [
-            f"https://{S3_BUCKET}.s3.amazonaws.com/{obj['Key']}"
+            f"https://{S3_BUCKET}.s3.{AWS_REGION}.amazonaws.com/{obj['Key']}"
             for obj in objetos.get("Contents", [])
             if obj["Key"].lower().endswith((".png", ".jpg", ".jpeg"))
         ]
         return imagenes
-    except (NoCredentialsError, PartialCredentialsError, Exception):
+
+    except Exception as e:
+        print(f"⚠️ Error accediendo al bucket S3: {e}")
         return []
+
 
 @pokenea_bp.route('/pokenea-json')
 def pokenea_json():
