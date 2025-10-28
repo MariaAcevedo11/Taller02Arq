@@ -9,8 +9,10 @@ from models.pokeneas_data import pokeneas
 pokenea_bp = Blueprint('pokenea_bp', __name__)
 
 # Variables de entorno esperadas
-S3_BUCKET = os.getenv("S3_BUCKET")
-AWS_REGION = os.getenv("AWS_REGION", "us-east-1")
+# Configuración directa del bucket público
+S3_BUCKET = "bucketgabsab"
+AWS_REGION = "us-east-1"
+
 
 def obtener_imagenes_s3():
     """
