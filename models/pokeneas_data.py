@@ -4,7 +4,7 @@ pokeneas = [
         "nombre": "Chappiechu",
         "altura": 0.8,
         "habilidad": "Responder al instante",
-        "imagen": "https://i.imgur.com/ZJmMZNY.png",
+        "imagen": "",
         "frase": "El conocimiento compartido ilumina incluso los servidores más oscuros."
     },
     {
@@ -12,7 +12,7 @@ pokeneas = [
         "nombre": "Flaskmander",
         "altura": 1.1,
         "habilidad": "Encender servidores Flask",
-        "imagen": "https://i.imgur.com/kNWi7xE.png",
+        "imagen": "",
         "frase": "Un buen backend es como el fuego: cálido y poderoso."
     },
     {
@@ -20,7 +20,7 @@ pokeneas = [
         "nombre": "Medellinmon",
         "altura": 1.5,
         "habilidad": "Subirse al metro y nunca llegar tarde",
-        "imagen": "https://i.imgur.com/vRnLeqP.png",
+        "imagen": "",
         "frase": "La vida es un bucle, pero con un buen código se optimiza."
     },
     {
@@ -28,7 +28,7 @@ pokeneas = [
         "nombre": "Arepachu",
         "altura": 0.6,
         "habilidad": "Recargar energía con cada mordisco",
-        "imagen": "https://i.imgur.com/xKTCD3J.png",
+        "imagen": "",
         "frase": "El alma paisa se alimenta de maíz y determinación."
     },
     {
@@ -36,7 +36,7 @@ pokeneas = [
         "nombre": "Antioqueen",
         "altura": 1.7,
         "habilidad": "Controlar los cafetales con elegancia",
-        "imagen": "https://i.imgur.com/XSLhxYk.png",
+        "imagen": "",
         "frase": "No hay bug que un buen tinto no pueda resolver."
     },
     {
@@ -44,7 +44,7 @@ pokeneas = [
         "nombre": "Pythosaurio",
         "altura": 2.0,
         "habilidad": "Depurar errores ancestrales",
-        "imagen": "https://i.imgur.com/2mZLzW3.png",
+        "imagen": "",
         "frase": "Cada traceback es un recordatorio de que el conocimiento nunca termina."
     },
     {
@@ -52,7 +52,7 @@ pokeneas = [
         "nombre": "Dockerchu",
         "altura": 0.9,
         "habilidad": "Multiplicarse en contenedores infinitos",
-        "imagen": "https://i.imgur.com/E6hBnh3.png",
+        "imagen": "",
         "frase": "El aislamiento es poder, pero la conexión lo es todo."
     }
 ]
